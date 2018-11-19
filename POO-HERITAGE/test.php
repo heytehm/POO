@@ -14,3 +14,5 @@ spl_autoload_register('chargerClasse');
 $Voiture1= new Voiture('bmw',50,4,70);
 $Voiture1->afficheValeurAttributs();
 $Voiture1-> taxeVente();
+$avion1= new Avion('f16',2145,4,2600);
+$avion1->afficheValeurAttributs();

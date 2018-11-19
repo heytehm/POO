@@ -6,7 +6,7 @@
  * Time: 19:29
  */
 
-class Vehicule
+abstract class Vehicule
 {
     protected $marque;
     protected $dateAchat;
@@ -15,7 +15,7 @@ class Vehicule
 
     public function __construct($marque, $prixAchat,$prixCourant) // constructeur prenant en paramètres la marque, la date d'achat et le prix d'achat.
     {
-        echo ' constructeur de la classe <br>'; // Message s'affichant une fois que tout objet est créé.
+        echo ' constructeur de la classe vehicule<br>'; // Message s'affichant une fois que tout objet est créé.
         $this->setMarque($marque); // Initialisation de la marque.
         $this->setPrixAchat($prixAchat); // Initialisation deu prix d'achat.
         $this->setPrixCourant($prixCourant); // Initialisation deu prix Courant.
@@ -29,10 +29,7 @@ class Vehicule
         echo $this->prixAchat;
     }
 
-    protected function déplacer(){
-
-
-    }
+    abstract protected function deplacer();
 
     /**
      * @return mixed

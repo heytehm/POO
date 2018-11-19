@@ -12,8 +12,7 @@ class Voiture extends Vehicule{
     /**
      * @return mixed
      */
-    public function getNombrePortes()
-    {
+    public function getNombrePortes(){
         return $this->nombrePortes;
     }
 
@@ -29,6 +28,8 @@ class Voiture extends Vehicule{
     }
 
     public function __construct($marque, $prixAchat,$nombrePortes,$prixCourant) {
+
+        echo ' constructeur de la classe voiure<br>'; // Message s'affichant une fois que tout objet est créé.
 
         Vehicule::__construct($marque, $prixAchat,$prixCourant);
         $this->setNombrePortes($nombrePortes);
@@ -46,8 +47,12 @@ class Voiture extends Vehicule{
     public function taxeVente (){
 
         $tax=$this->prixCourant*5/100;
-     echo  'le taxe sur la vente est :'. $tax;
+     echo  'le taxe sur la vente est :'. $tax;echo'<br><hr>';
 
+    }
+
+    protected function deplacer(){
+        // TODO: Implement deplacer() method.
     }
 
 
